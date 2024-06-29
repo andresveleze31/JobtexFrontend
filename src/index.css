@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  body {
+    font-size: 1.6rem;
+    color: #121212;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0 0 2rem 0;
+  }
+  h1 {
+    font-size: 5.6rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+
+  ol,
+  ul,
+  menu {
+    list-style: auto;
+    margin-left: 50px;
+    padding: 5px;
+
+  }
+}
+
+@layer components {
+  .contenedor {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Ajuste para pantallas más grandes */
+  @media screen and (min-width: 1450px) {
+    .contenedor {
+      max-width: 1400px; /* Puedes ajustar el porcentaje según tus necesidades */
+    }
+  }
+
+  .header {
+    background-image: url("../public/images/home_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero_candidate {
+    background-image: url("../public/images/hero_candidate.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero_employer {
+    background-image: url("../public/images/banner-employer_detail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
