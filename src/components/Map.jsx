@@ -15,9 +15,10 @@ function Map({lat, long}) {
     ];
 
     const customIcon = new Icon({
-        iconUrl: "../../public/icons/icon_ubicacion_map.png",
-        iconSize: [38, 38]
-    })
+      iconUrl:
+        "https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/map-pin-icon.png",
+      iconSize: [38, 38],
+    });
 
     return (
         <MapContainer className='h-[35rem]' center={[lat , long ]} zoom={13}>

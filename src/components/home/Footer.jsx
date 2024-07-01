@@ -1,4 +1,6 @@
+import { Facebook, Linkedin, MapPin, Phone, X } from "lucide-react";
 import React from "react";
+import { FaGoogle, FaPinterest, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -6,55 +8,34 @@ function Footer() {
     <footer className="bg-slate-100 pt-[7rem] pb-[3rem] ">
       <div className="contenedor">
         <div className="flex justify-between border-b border-gray-300 pb-[2rem] md:flex-col md:gap-[2rem] md:items-center ">
-          <img src="../../public/images/logo_black.svg" alt="Logo" />
+          <img
+            src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/logo.svg"
+            alt="Logo"
+          />
 
           <div className="flex gap-[2rem] items-center">
             <p className="text-[1.4rem] font-bold">Follow us:</p>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
-              <img
-                className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem] "
-                src="../../public/icons/icon_facebook.png"
-                alt="Icon Social"
-              />
+              <Facebook />
             </div>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
-              <img
-                className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem] "
-                src="../../public/icons/icon_twitter.png"
-                alt="Icon Social"
-              />
+              <FaTwitter />
             </div>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
-              <img
-                className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem] "
-                src="../../public/icons/icon_linkedin.png"
-                alt="Icon Social"
-              />
+              <Linkedin />
             </div>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
-              <img
-                className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem] "
-                src="../../public/icons/icon_pinterest.png"
-                alt="Icon Social"
-              />
+              <FaPinterest />
             </div>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
-              <img
-                className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem] "
-                src="../../public/icons/icon_google.png"
-                alt="Icon Social"
-              />
+              <FaGoogle />
             </div>
           </div>
         </div>
         <nav className="grid mt-[3rem] grid-cols-[2fr,1fr,1fr,1fr,1fr] gap-[2rem] sm:grid-cols-2   md:justify-items-center md:items-center ">
           <div className="md:flex md:flex-col md:items-center">
             <div className="flex  gap-[2rem] items-center">
-              <img
-                className="w-[4rem] h-[4rem] "
-                src="../../public/icons/icon_phone.png"
-                alt="Icon Phone"
-              />
+              <Phone className="text-primary w-[4rem] h-[4rem] " />
               <div>
                 <span className="text-customGray text-[1.4rem] ">
                   Need Help? 24/7
@@ -67,12 +48,7 @@ function Footer() {
               earn money in the process!
             </p>
             <p className="text-[1.4rem] mt-[1rem] flex gap-[1rem] items-center ">
-              {" "}
-              <img
-                className="w-[2rem] h-[2rem] "
-                src="../../public/icons/icon_ubicacion_black.png"
-                alt="Logo Ubicacion"
-              />{" "}
+              <MapPin className="text-customGray" />
               118 E 128th St, East Chicago, IN 46312, US
             </p>
           </div>
@@ -132,13 +108,13 @@ function Footer() {
             <div className="flex mt-[2rem] flex-col gap-[1rem] ">
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
                 <img
-                  src="../../public/icons/icon_playstore.png"
+                  src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/google-play.png"
                   alt="Icon PlayStore"
                 />
               </Link>
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
                 <img
-                  src="../../public/icons/icon_appstore.png"
+                  src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/app-store.png"
                   alt="Icon AppStore"
                 />
               </Link>

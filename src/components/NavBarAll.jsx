@@ -17,7 +17,10 @@ function NavBarAll() {
       <div className=" border-b border-slate-100 border-opacity-15 py-[2rem]">
         <div className="contenedor flex items-center  justify-between">
           <div className="flex gap-[4rem] items-center  ">
-            <img src="../../public/images/logo_black.svg" alt="Logo Jobtex" />
+            <img
+              src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/logo.svg"
+              alt="Logo Jobtex"
+            />
             <button className="flex gap-[1rem] md:hidden  ">
               <LayoutDashboard />
               Categories
@@ -107,12 +110,9 @@ function NavBarAll() {
             <button className=" font-semibold border border-primary py-[1rem] px-[4rem] hover:bg-primary transition-all duration-300 rounded-lg hover:text-white ">
               Post Job
             </button>
-
-            
           </div>
 
-          <MobileNav  />
-
+          <MobileNav />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import ContactFormEmployer from "../components/employers/ContactFormEmployer";
 import Map from "../components/Map";
 import axios from "axios";
 import useAuthCandidate from "../hooks/useAuthCandidate";
+import { MapPin } from "lucide-react";
 
 function EmployerDetails() {
   const { id } = useParams();
@@ -57,17 +58,15 @@ function EmployerDetails() {
             <div className="flex gap-[2rem] items-center">
               <img
                 className="w-[10rem] h-[10rem] "
-                src="../public/images/employers_example.png"
+                src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                  employer.photo
+                }`}
                 alt="Employer Image"
               />
               <div>
                 <h3 className="font-bold mb-2">Employer</h3>
                 <div className="flex gap-[.5rem] items-center ">
-                  <img
-                    className="w-[2.3rem] h-[2.4rem] "
-                    src="../public/icons/icon_ubicacion_gray.png"
-                    alt="Icon Location"
-                  />
+                  <MapPin />
                   <p className="text-[1.4rem] text-customGray">Manhattan Ave</p>
                 </div>
                 <div className="flex gap-[2rem] mt-[1.5rem]  ">
@@ -94,7 +93,11 @@ function EmployerDetails() {
       </header>
       <div className="mt-[14rem] mb-[4rem] contenedor grid grid-cols-[2fr,1fr] md:grid-cols-1 gap-[7rem] ">
         {cargado && (
-          <EmployerInformation employer={employer} comments={comments} setComments={comments} />
+          <EmployerInformation
+            employer={employer}
+            comments={comments}
+            setComments={comments}
+          />
         )}
 
         <div className="flex flex-col gap-[3rem] ">

@@ -1,3 +1,4 @@
+import { File } from "lucide-react";
 import React from "react";
 
 function CandidateAside({ candidate, networks }) {
@@ -66,43 +67,19 @@ function CandidateAside({ candidate, networks }) {
           </p>
         </div>
 
-        <div className=" mt-[1.5rem] flex justify-between items-center pb-[1.3rem] sm:hidden ">
-          <p className="text-customGray text-[1.6rem] ">Socials</p>
-          <div className="flex gap-[2rem] items-center">
-            {networks.map((network) => (
-              <a
-                key={network._id}
-                href={`${network.url}`} // URL a la que quieres redirigir
-                target="_blank" // Abre en una nueva pestaña
-                rel="noopener noreferrer"
-              >
-                <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-gray-200">
-                  <img
-                    className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem]"
-                    src={`../../public/icons/icon_${network.social_id.social_name}.png`}
-                    alt="Icon Social"
-                  />
-                </div>
-              </a>
-            ))}
-          </div>{" "}
-        </div>
+       
         <a
           target="_blank"
           href={`${import.meta.env.VITE_BACKEND_URL}/uploads/${candidate.cv}`}
         >
-          <button className="bg-white group w-full mt-[2rem]  border p-[1.3rem] hover:bg-primary transition-all duration-300 rounded-xl flex justify-between">
+          <button className="bg-white group w-full mt-[2rem]  border p-[1.3rem] hover:bg-primary transition-all duration-300 rounded-xl flex justify-between items-center">
             <div className="flex flex-col group-hover:text-white transition-all duration-300 gap-[.8rem] ">
               <p className="text-[1.2rem] uppercase text-left font-semibold">
                 CV
               </p>
               <p className="text-[1.6rem] text-left font-bold ">PDF</p>
             </div>
-            <img
-              className="h-[5rem] w-[5rem] group-hover:filter group-hover:brightness-50 transition-all duration-300 group-hover:opacity-50"
-              src="../../public/icons/icon_pdf.png"
-              alt="Icon Pdf"
-            />
+            <File />
           </button>
         </a>
 

@@ -15,7 +15,10 @@ function NavBarHome() {
     <div className=" border-b border-slate-100 border-opacity-15 py-[2rem]">
       <div className="contenedor flex items-center  justify-between">
         <div className="flex gap-[4rem] items-center ">
-          <img src="../../public/images/logo-white.svg" alt="Logo Jobtex" />
+          <img
+            src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/logo-white.svg"
+            alt="Logo Jobtex"
+          />
           <button className="flex gap-[1rem] md:hidden text-white ">
             <LayoutDashboard />
             Categories

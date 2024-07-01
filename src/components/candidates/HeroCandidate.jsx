@@ -1,4 +1,6 @@
+import { DollarSignIcon, MapPin } from "lucide-react";
 import React from "react";
+import { FaMoneyBill } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function HeroCandidate({candidate}) {
@@ -22,11 +24,7 @@ function HeroCandidate({candidate}) {
               {Object.keys(candidate).length > 0 && candidate.fullname}
             </h3>
             <div className="flex gap-[1rem] items-center md:justify-center ">
-              <img
-                className="w-[2.3rem] h-[2.4rem] "
-                src="../public/icons/icon_ubicacion_white.png"
-                alt="Icon Location"
-              />
+              <MapPin className="text-white" />
               <p className="text-[1.4rem] text-white">
                 {" "}
                 {Object.keys(candidate).length > 0 && candidate.address}
@@ -44,11 +42,7 @@ function HeroCandidate({candidate}) {
                 </Link>
               </div>
               <div className="flex items-center">
-                <img
-                  className="w-[2.5rem] h-[2.5rem] filter invert "
-                  src="../../public/icons/icon_money.png"
-                  alt="Icon Money"
-                />
+                <DollarSignIcon className="text-white" />
                 <p className="text-white text-[1.6rem] ">
                   $ {Object.keys(candidate).length > 0 && candidate.salary} /{" "}
                   {Object.keys(candidate).length > 0 &&

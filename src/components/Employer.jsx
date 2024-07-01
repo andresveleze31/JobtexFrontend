@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Employer({employer}) {
   return (
-    <div className="p-[2rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300 flex justify-center">
+    <div className="px-[2rem] py-[4rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300 flex justify-center">
       <div className="flex-col items-center">
         <div className="flex gap-[2rem] items-center ">
           <img

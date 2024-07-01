@@ -88,7 +88,6 @@ function Home() {
       <FeaturedJobs />
       <Banner />
       <TopEmployers />
-      <ActiveSlider />
       <Clients />
       <Footer />
     </div>

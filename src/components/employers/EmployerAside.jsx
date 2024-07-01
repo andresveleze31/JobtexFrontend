@@ -63,27 +63,7 @@ function EmployerAside({ employer, networks }) {
           </p>
         </div>
 
-        <div className=" mt-[1.5rem] flex justify-between items-center pb-[1.3rem] ">
-          <p className="text-customGray text-[1.6rem] ">Socials</p>
-          <div className="flex gap-[2rem] items-center">
-            {networks.length > 0 && networks.map((network) => (
-              <a
-                key={network._id}
-                href={`${network.url}`} // URL a la que quieres redirigir
-                target="_blank" // Abre en una nueva pestaña
-                rel="noopener noreferrer"
-              >
-                <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-gray-200">
-                  <img
-                    className="w-[2rem] group-hover:filter group-hover:invert transition-all duration-300 h-[2rem]"
-                    src={`../../public/icons/icon_${network.social_id.social_name}.png`}
-                    alt="Icon Social"
-                  />
-                </div>
-              </a>
-            ))}
-          </div>{" "}
-        </div>
+        
 
         <Link
           to={Object.keys(employer).length > 0 && employer.website}

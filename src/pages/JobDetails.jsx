@@ -8,6 +8,7 @@ import ContactFormEmployer from "../components/employers/ContactFormEmployer";
 import axios from "axios";
 import useAuthCandidate from "../hooks/useAuthCandidate";
 import toast from "react-hot-toast";
+import { Calendar, DollarSign, Heart, LocateIcon, MapPin } from "lucide-react";
 
 function JobDetails() {
   const { id } = useParams();
@@ -141,21 +142,13 @@ function JobDetails() {
                 <h3 className="font-bold mb-3">{job.title}</h3>
                 <div className="flex mb-[1rem] gap-[1rem] ">
                   <div className="flex gap-[.5rem] items-center ">
-                    <img
-                      className="w-[2.3rem] h-[2.4rem] "
-                      src="../public/icons/icon_ubicacion_gray.png"
-                      alt="Icon Location"
-                    />
+                    <MapPin className="text-customGray" />
                     <p className="text-[1.4rem] text-customGray">
                       {job.address}
                     </p>
                   </div>
                   <div className="flex gap-[.5rem] items-center ">
-                    <img
-                      className="w-[2.2rem] h-[2.2rem] "
-                      src="../public/icons/icon_calendar_gray.png"
-                      alt="Icon Location"
-                    />
+                    <Calendar className="text-customGray" />
                     <p className="text-[1.4rem] text-customGray">
                       {formattedDate}
                     </p>
@@ -170,11 +163,7 @@ function JobDetails() {
             <div className="md:grid md:grid-cols-2 md:items-center mt-[2rem] ">
               <div className="flex gap-[2rem] h-fit   ">
                 <button className="border rounded-full py-[1rem] px-[1.2rem] ">
-                  <img
-                    className="filter opacity-25 grayscale w-[2rem] h-[2rem] "
-                    src="../public/icons/icon_corazon.png"
-                    alt="Icon Corazon"
-                  />
+                  <Heart className="text-customGray" />
                 </button>
                 <button
                   onClick={handleApply}
@@ -191,11 +180,7 @@ function JobDetails() {
                   {job.deadline}
                 </p>
                 <div className="flex justify-end md:justify-start mt-[1rem]">
-                  <img
-                    className="w-[3rem] h-[3rem] "
-                    src="../public/icons/icon_money.png"
-                    alt="Icon Money"
-                  />
+                  <DollarSign />
                   <p className="font-bold">
                     ${job.minSalary} - ${job.maxSalary}{" "}
                     <span className="font-normal text-[1.4rem] text-customGray ">
