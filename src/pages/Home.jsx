@@ -13,6 +13,7 @@ import ModalLogin from "../components/ModalLogin";
 import { Toaster } from "react-hot-toast";
 import ModalRegister from "../components/ModalRegister";
 import { LocateIcon, Search } from "lucide-react";
+import NavBarAll from "../components/NavBarAll";
 
 function Home() {
 
@@ -26,7 +27,12 @@ function Home() {
       {login && <ModalLogin />}
       {register && <ModalRegister />}
       <header className="header  ">
-        <NavBarHome />
+        <div className="md:hidden">
+          <NavBarHome />
+        </div>
+        <div className="hidden md:block bg-white">
+          <NavBarAll />
+        </div>
         <div className="contenedor py-[15rem]">
           <div className="text-white w-1/2 flex flex-col items-start md:w-full ">
             <h1 className="font-bold">Find The Job That Fits Your Life</h1>

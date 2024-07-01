@@ -5,6 +5,7 @@ import useAuthCandidate from "../hooks/useAuthCandidate";
 import useAuthEmployer from "../hooks/useAuthEmployer";
 import axios from "axios";
 import { Bell, LayoutDashboard, User } from "lucide-react";
+import MobileNav from "./MobileNav";
 
 function NavBarAll() {
   const { setLogin } = useJobtex();
@@ -106,7 +107,12 @@ function NavBarAll() {
             <button className=" font-semibold border border-primary py-[1rem] px-[4rem] hover:bg-primary transition-all duration-300 rounded-lg hover:text-white ">
               Post Job
             </button>
+
+            
           </div>
+
+          <MobileNav  />
+
         </div>
       </div>
     </div>

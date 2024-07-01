@@ -5,7 +5,7 @@ import { FileText, Forward, Heart, Lock, LogOut, MessageCircle, Send, User2 } fr
 
 function SidebarCandidate() {
   return (
-    <aside className="flex h-[calc(100vh-90px)] items-start flex-col gap-[2rem] px-[1.5rem] py-[3rem]   ">
+    <aside className="flex h-[calc(100vh-90px)] items-start flex-col gap-[2rem] px-[1.5rem] py-[3rem]    ">
       <Link
         className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"profile"}

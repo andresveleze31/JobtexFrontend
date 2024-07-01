@@ -53,7 +53,7 @@ function EmployerDetails() {
     <div>
       <header className="hero_employer h-[40rem]">
         <div className="contenedor flex h-[40rem] items-end">
-          <div className="bg-white mb-[-10rem] border-b w-full p-[5rem] flex justify-between">
+          <div className="bg-white mb-[-10rem] border-b w-full p-[5rem] flex justify-between md:flex-col gap-[2rem] ">
             <div className="flex gap-[2rem] items-center">
               <img
                 className="w-[10rem] h-[10rem] "
@@ -92,7 +92,7 @@ function EmployerDetails() {
           </div>
         </div>
       </header>
-      <div className="mt-[14rem] mb-[4rem] contenedor grid grid-cols-[2fr,1fr] gap-[7rem] ">
+      <div className="mt-[14rem] mb-[4rem] contenedor grid grid-cols-[2fr,1fr] md:grid-cols-1 gap-[7rem] ">
         {cargado && (
           <EmployerInformation employer={employer} comments={comments} setComments={comments} />
         )}

@@ -119,9 +119,9 @@ function JobDetails() {
     <main>
       <header className="hero_employer h-[40rem]"></header>
 
-      <div className="my-[4rem] contenedor grid grid-cols-[2fr,1fr] gap-[7rem] ">
+      <div className="my-[4rem] contenedor grid grid-cols-[2fr,1fr] md:grid-cols-1  gap-[7rem] ">
         <div>
-          <div className="flex pb-[3rem]  border-b justify-between">
+          <div className="flex pb-[3rem]  border-b justify-between md:flex-col">
             <div className="flex  items-center gap-[2rem]">
               <img
                 className="w-[10rem] h-[10rem] "
@@ -167,8 +167,8 @@ function JobDetails() {
               </div>
             </div>
 
-            <div>
-              <div className="flex gap-[2rem]">
+            <div className="md:grid md:grid-cols-2 md:items-center mt-[2rem] ">
+              <div className="flex gap-[2rem] h-fit   ">
                 <button className="border rounded-full py-[1rem] px-[1.2rem] ">
                   <img
                     className="filter opacity-25 grayscale w-[2rem] h-[2rem] "
@@ -183,24 +183,26 @@ function JobDetails() {
                   Apply Now
                 </button>
               </div>
-              <p className="mt-[1rem] flex justify-end gap-[.5rem] text-[1.4rem] font-bold">
-                <span className="text-red-600 font-normal">
-                  Deadline Date:{" "}
-                </span>{" "}
-                {job.deadline}
-              </p>
-              <div className="flex justify-end mt-[1rem]">
-                <img
-                  className="w-[3rem] h-[3rem] "
-                  src="../public/icons/icon_money.png"
-                  alt="Icon Money"
-                />
-                <p className="font-bold">
-                  ${job.minSalary} - ${job.maxSalary}{" "}
-                  <span className="font-normal text-[1.4rem] text-customGray ">
-                    / {cargando ? "money" : job.salaryType.salaryType}
-                  </span>
+              <div>
+                <p className="mt-[1rem] flex justify-end md:justify-start gap-[.5rem] text-[1.4rem] font-bold">
+                  <span className="text-red-600 font-normal">
+                    Deadline Date:{" "}
+                  </span>{" "}
+                  {job.deadline}
                 </p>
+                <div className="flex justify-end md:justify-start mt-[1rem]">
+                  <img
+                    className="w-[3rem] h-[3rem] "
+                    src="../public/icons/icon_money.png"
+                    alt="Icon Money"
+                  />
+                  <p className="font-bold">
+                    ${job.minSalary} - ${job.maxSalary}{" "}
+                    <span className="font-normal text-[1.4rem] text-customGray ">
+                      / {cargando ? "money" : job.salaryType.salaryType}
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
