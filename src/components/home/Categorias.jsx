@@ -3,9 +3,16 @@ import Categoria from "./Categoria";
 import { Link } from "react-router-dom";
 import useJobtex from "../../hooks/useJobtex";
 import { StepForward } from "lucide-react";
+import Loader from "../Loader";
 
 function Categorias() {
   const { categories } = useJobtex();
+
+  if (categories.length == 0) {
+    return(
+      <Loader />
+    )
+  }
 
   return (
     <div className="contenedor mt-[5rem] ">

@@ -14,6 +14,7 @@ import { Toaster } from "react-hot-toast";
 import ModalRegister from "../components/ModalRegister";
 import { LocateIcon, Search } from "lucide-react";
 import NavBarAll from "../components/NavBarAll";
+import Loader from "../components/Loader";
 
 function Home() {
 

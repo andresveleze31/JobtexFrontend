@@ -3,6 +3,7 @@ import BannerNav from "../components/BannerNav";
 import FormularioEmployers from "../components/employers/FormularioEmployers";
 import Employer from "../components/Employer";
 import useJobtex from "../hooks/useJobtex";
+import Loader from "../components/Loader";
 
 function Employers() {
 
@@ -14,6 +15,7 @@ function Employers() {
       <FormularioEmployers />
 
       <div className="contenedor mb-[10rem] ">
+        {employers.length == 0 && <Loader />}
         <div className="grid grid-cols-3 gap-[2rem] md:grid-cols-2 sm:grid-cols-1">
           {employers.map((emp) => {
             return <Employer employer={emp} />;

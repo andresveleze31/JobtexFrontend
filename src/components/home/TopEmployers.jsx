@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import Employer from "../Employer";
 import useJobtex from "../../hooks/useJobtex";
 import { Forward, StepForward } from "lucide-react";
+import Loader from "../Loader";
 
 function TopEmployers() {
 
   const {employers} = useJobtex();
+
+  if (employers.length == 0) {
+    return <Loader />;
+  }
 
   return (
     <div className="contenedor my-[10rem] ">

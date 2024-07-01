@@ -3,6 +3,7 @@ import FormularioCandidates from "../components/candidates/FormularioCandidates"
 import BannerNav from "../components/BannerNav";
 import Candidate from "../components/Candidate";
 import useJobtex from "../hooks/useJobtex";
+import Loader from "../components/Loader";
 
 function Candidates() {
 
@@ -15,13 +16,12 @@ function Candidates() {
       <FormularioCandidates />
 
       <div className="contenedor mb-[10rem] ">
+        {candidates.length == 0 && <Loader />}
         <div className="grid grid-cols-3 gap-[4rem] sm:grid-cols-1 md:grid-cols-2">
-          {candidates.map(cand => {
-            return <Candidate candidate={cand} />
+          {candidates.map((cand) => {
+            return <Candidate candidate={cand} />;
           })}
-
         </div>
-
       </div>
     </div>
   );

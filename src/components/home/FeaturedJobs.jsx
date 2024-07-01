@@ -7,6 +7,7 @@ function FeaturedJobs() {
 
   const {jobs} = useJobtex();
 
+
   
 
   return (
