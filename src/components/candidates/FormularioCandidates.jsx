@@ -1,14 +1,11 @@
+import { Search } from 'lucide-react';
 import React from 'react'
 
 function FormularioCandidates() {
   return (
     <div className="contenedor p-[2rem]  grid grid-cols-6 gap-[2rem] rounded-xl items-center py-[1rem] my-[5rem] border md:grid-cols-3 sm:grid-cols-1 md:py-[3rem] ">
       <div className="bg-white   flex gap-[2rem]">
-        <img
-          className="w-[3rem] h-[3rem] "
-          src="../../public/icons/icon_lupa_black.png"
-          alt="Icon Lupa"
-        />
+        <Search />
         <input
           className="w-full focus:outline-none"
           type="text"

@@ -1,12 +1,13 @@
 import React from "react";
+import { Bell, LayoutDashboard, User } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import useJobtex from "../hooks/useJobtex";
 import useAuthCandidate from "../hooks/useAuthCandidate";
 import useAuthEmployer from "../hooks/useAuthEmployer";
 
 function NavBarHome() {
-
-  const {setLogin} = useJobtex();
+  const { setLogin } = useJobtex();
   const { authCandidate } = useAuthCandidate();
   const { authEmployer } = useAuthEmployer();
 
@@ -16,11 +17,7 @@ function NavBarHome() {
         <div className="flex gap-[4rem] items-center ">
           <img src="../../public/images/logo-white.svg" alt="Logo Jobtex" />
           <button className="flex gap-[1rem] md:hidden text-white ">
-            <img
-              className="w-[2.2rem] "
-              src="../public/icons/icon_categoria_white.png"
-              alt="Icono Categorias"
-            />{" "}
+            <LayoutDashboard />
             Categories
           </button>
         </div>
@@ -94,20 +91,12 @@ function NavBarHome() {
         <div className="flex gap-[2rem] items-center md:hidden">
           {!authCandidate._id && !authEmployer._id && (
             <div className="flex gap-[2rem] mr-[3rem] items-center ">
-              <img
-                className="w-[3rem] filter  "
-                src="../../public/icons/icon_notificacion_white.png"
-                alt="Icon Notification"
-              />
+              <Bell className="text-white" />
               <button
                 onClick={() => setLogin(true)}
                 className="flex font-semibold gap-[1rem] text-white text-[1.4rem] "
               >
-                <img
-                  className="w-[2.5rem] filter "
-                  src="../../public/icons/icon_user_white.png"
-                  alt="Icono Usuario"
-                />
+                <User />
                 Login / Register
               </button>
             </div>

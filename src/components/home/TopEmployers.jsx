@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Employer from "../Employer";
 import useJobtex from "../../hooks/useJobtex";
+import { Forward, StepForward } from "lucide-react";
 
 function TopEmployers() {
 
@@ -18,11 +19,7 @@ function TopEmployers() {
         </div>
         <Link className="font-semibold  flex gap-[2rem] items-center " to={"#"}>
           All Employers{" "}
-          <img
-            className="w-[3rem] h-[3rem] "
-            src="../public/icons/icon_flecha.png"
-            alt="Icono Flecha"
-          />{" "}
+          <StepForward />
         </Link>
       </div>
       <div className="grid mt-[5rem] grid-cols-3 gap-[2rem] sm:grid-cols-1 md:grid-cols-2 ">

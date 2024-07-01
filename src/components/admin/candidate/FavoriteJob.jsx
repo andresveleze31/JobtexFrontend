@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuthCandidate from '../../../hooks/useAuthCandidate';
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import { Eye, MapPin, Search, Trash } from 'lucide-react';
 
 function FavoriteJob({job, jobs, setJobs}) {
   // Crear un objeto Date con la fecha de MongoDB
@@ -65,21 +66,14 @@ function FavoriteJob({job, jobs, setJobs}) {
           <h3 className="text-[1.8rem] font-bold m-0 ">{job.job_id.title}</h3>
           <div className="flex gap-[1rem]">
             <div className="flex gap-[.5rem] items-center">
-              <img
-                className="w-[2.3rem] h-[2.3rem] "
-                src="../../public/icons/icon_ubicacion_gray.png"
-                alt="Icon Ubicacion"
-              />
+              <MapPin className="text-customGray w-[2rem] h-[2rem] " />
+
               <span className="text-customGray text-[1.4rem]">
                 {job.job_id.location_id.location}
               </span>
             </div>
             <div className="flex gap-[.5rem] items-center">
-              <img
-                className="w-[2.3rem] h-[2.3rem] "
-                src="../../public/icons/icon_lupa_black.png"
-                alt="Icon Ubicacion"
-              />
+              <Search className="text-customGray w-[2rem] h-[2rem] "/>
               <span className="text-customGray text-[1.4rem]">
                 {job.job_id.industry_id.industry}
               </span>
@@ -91,27 +85,18 @@ function FavoriteJob({job, jobs, setJobs}) {
         <p className="text-[1.4rem] ">{formattedDate}</p>
       </div>
 
-
       <div className="flex gap-[2rem] ">
         <Link
           className="bg-gray-100 group-hover:bg-white transition-all duration-300 w-[4.5rem] p-[1rem] "
           to={`/jobs/${job.job_id._id}`}
         >
-          <img
-            className="w-[2.5rem] h-[2.5rem]  "
-            src="../../public/icons/icon_eye.png"
-            alt="Icon Edit"
-          />
+          <Eye />
         </Link>
         <button
           onClick={handleDelete}
           className="bg-gray-100 group-hover:bg-white transition-all duration-300 w-[4.5rem]  p-[1rem]"
         >
-          <img
-            className="w-[2.5rem] h-[2.5rem] "
-            src="../../public/icons/icon_delete.png"
-            alt="Icon Delete"
-          />
+          <Trash />
         </button>
       </div>
     </div>

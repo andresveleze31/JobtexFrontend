@@ -12,6 +12,7 @@ import useJobtex from "../hooks/useJobtex";
 import ModalLogin from "../components/ModalLogin";
 import { Toaster } from "react-hot-toast";
 import ModalRegister from "../components/ModalRegister";
+import { LocateIcon, Search } from "lucide-react";
 
 function Home() {
 
@@ -38,11 +39,7 @@ function Home() {
 
           <form className="bg-white w-4/6 mt-[4rem] sm:pt-[4rem] rounded-xl p-[2rem] flex md:flex-col gap-[5rem] md:w-full md:justify-center ">
             <div className="flex md:w-full gap-[1rem] md:gap-[2rem] items-center ">
-              <img
-                className="w-[3rem] h-[3rem] "
-                src="../public/icons/icon_lupa_black.png"
-                alt="Icono Lupa"
-              />
+              <Search />
               <input
                 className="w-[26rem] md:w-full focus:outline-none"
                 type="text"
@@ -50,11 +47,7 @@ function Home() {
               />
             </div>
             <div className="flex gap-[2rem] md:w-full items-center ">
-              <img
-                className="w-[3rem] h-[3rem] "
-                src="../public/icons/icon_ubicacion_black.png"
-                alt="Icono Lupa"
-              />
+              <LocateIcon />
               <select
                 className="w-[25rem] md:w-full  focus:outline-none"
                 id="location"
@@ -71,7 +64,7 @@ function Home() {
               </select>
             </div>
             <input
-              className="text-white font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 "
+              className="text-white w-full font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 "
               type="submit"
               value={"Find Jobs"}
             />

@@ -4,6 +4,7 @@ import useJobtex from "../hooks/useJobtex";
 import useAuthCandidate from "../hooks/useAuthCandidate";
 import useAuthEmployer from "../hooks/useAuthEmployer";
 import axios from "axios";
+import { Bell, LayoutDashboard, User } from "lucide-react";
 
 function NavBarAll() {
   const { setLogin } = useJobtex();
@@ -17,11 +18,7 @@ function NavBarAll() {
           <div className="flex gap-[4rem] items-center  ">
             <img src="../../public/images/logo_black.svg" alt="Logo Jobtex" />
             <button className="flex gap-[1rem] md:hidden  ">
-              <img
-                className="w-[2.2rem] filter invert "
-                src="../../public/icons/icon_categoria_white.png"
-                alt="Icono Categorias"
-              />{" "}
+              <LayoutDashboard />
               Categories
             </button>
           </div>
@@ -95,20 +92,12 @@ function NavBarAll() {
           <div className="flex gap-[2rem] items-center md:hidden">
             {!authCandidate._id && !authEmployer._id && (
               <div className="flex gap-[2rem] mr-[3rem] items-center ">
-                <img
-                  className="w-[3rem] filter invert "
-                  src="../../public/icons/icon_notificacion_white.png"
-                  alt="Icon Notification"
-                />
+                <Bell />
                 <button
                   onClick={() => setLogin(true)}
                   className="flex font-semibold gap-[1rem] text-[1.4rem] "
                 >
-                  <img
-                    className="w-[2.5rem] filter invert"
-                    src="../../public/icons/icon_user_white.png"
-                    alt="Icono Usuario"
-                  />
+                  <User />
                   Login / Register
                 </button>
               </div>

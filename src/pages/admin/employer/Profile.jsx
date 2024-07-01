@@ -83,7 +83,9 @@ function Profile() {
       setNetworksArray(candidateNet.data);
     }
 
-    setCargando(false);
+    if (data.lat !== undefined) {
+      setCargando(false);
+    }
 
     console.log(data);
   }

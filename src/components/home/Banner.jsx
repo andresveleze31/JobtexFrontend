@@ -1,3 +1,4 @@
+import { Clock4, Recycle, UserRoundSearch } from "lucide-react";
 import React from "react";
 
 function Banner() {
@@ -14,11 +15,7 @@ function Banner() {
 
         <div className="grid grid-cols-3 sm:grid-cols-1 gap-[2rem]  mt-[4rem] ">
           <div className="flex flex-col gap-[1rem] sm:items-center ">
-            <img
-              className="w-[5rem] h-[5rem] "
-              src="../../public/icons/icon_hiring.png"
-              alt="Icon Hiring"
-            />
+            <UserRoundSearch className="w-[5rem] h-[5rem] text-primary " />
             <h3 className="m-0 font-bold">Reduce Hiring bias</h3>
             <p className="text-customGray sm:text-center">
               Structured digital interviews increase the predictive validity of
@@ -26,11 +23,7 @@ function Banner() {
             </p>
           </div>
           <div className="flex  flex-col gap-[1rem]  sm:items-center ">
-            <img
-              className="w-[5rem] h-[5rem] "
-              src="../../public/icons/icon_save_time.png"
-              alt="Icon Hiring"
-            />
+            <Clock4 className="w-[5rem] h-[5rem] text-primary " />
             <h3 className="m-0 font-bold">Save time & headspace</h3>
             <p className="text-customGray sm:text-center">
               Reduce your time-to-hire by up to 75% and free up headspace for
@@ -38,11 +31,7 @@ function Banner() {
             </p>
           </div>
           <div className="flex  flex-col gap-[1rem] sm:items-center ">
-            <img
-              className="w-[5rem] h-[5rem] "
-              src="../../public/icons/icon_ambiente.png"
-              alt="Icon Hiring"
-            />
+            <Recycle className="w-[5rem] h-[5rem] text-primary " />
             <h3 className="m-0 font-bold">Minimize Environmental Impact</h3>
             <p className="text-customGray sm:text-center">
               Did you know? U.S. office workers use ~10,000 sheets of paper

@@ -4,6 +4,7 @@ import useAuthCandidate from "../hooks/useAuthCandidate";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useState } from "react";
+import { Calendar, CircleDollarSign, Heart, MapPin } from "lucide-react";
 
 function Job({ job }) {
   console.log(job);
@@ -71,13 +72,15 @@ async function handleFavorite(e) {
 
 
   return (
-    <div className="p-[2rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300">
+    <div className="p-[2rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300 h-fit">
       <div>
         <div className="flex justify-between ">
           <div className="flex gap-[2rem] items-center">
             <img
               className="w-[6rem] h-[6rem] "
-              src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${job.employer_id.photo}`}
+              src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                job.employer_id.photo
+              }`}
               alt="Logo Employers"
             />
             <div className="flex flex-col gap-[.5rem] ">
@@ -92,19 +95,11 @@ async function handleFavorite(e) {
               </Link>
               <div className="flex gap-[1rem] ">
                 <div className="flex gap-[.5rem] items-center ">
-                  <img
-                    className="w-[2.3rem] h-[2.4rem] "
-                    src="../public/icons/icon_ubicacion_gray.png"
-                    alt="Icon Location"
-                  />
+                  <MapPin className="text-gray-500 w-[2rem]  " />
                   <p className="text-[1.4rem] text-customGray">{job.address}</p>
                 </div>
                 <div className="flex gap-[.5rem] items-center ">
-                  <img
-                    className="w-[2.2rem] h-[2.2rem] "
-                    src="../public/icons/icon_calendar_gray.png"
-                    alt="Icon Location"
-                  />
+                  <Calendar className="text-gray-500 w-[2rem]" />
                   <p className="text-[1.4rem] text-customGray">
                     {formattedDate}
                   </p>
@@ -114,13 +109,9 @@ async function handleFavorite(e) {
           </div>
           <button
             onClick={handleFavorite}
-            className="border h-[4rem] w-[4.2rem] rounded-full p-[1rem] "
+            className="border h-[4rem] w-[4.2rem] rounded-full p-[1rem] flex justify-center items-center "
           >
-            <img
-              className="filter opacity-25 grayscale w-[2rem] h-[2rem] "
-              src="../public/icons/icon_corazon.png"
-              alt="Icon Corazon"
-            />
+            <Heart className="text-gray-400" />
           </button>
         </div>
         <div className="mt-[1rem] flex gap-[1rem] pb-[2rem] border-b border-slate-200 border-opacity-50 ">
@@ -129,12 +120,8 @@ async function handleFavorite(e) {
           </Link>
         </div>
         <div className="flex justify-between mt-[1rem] items-center">
-          <div className="flex  ">
-            <img
-              className="w-[3rem] h-[3rem] "
-              src="../public/icons/icon_money.png"
-              alt="Icon Money"
-            />
+          <div className="flex items-center gap-[1rem]  ">
+            <CircleDollarSign  />
             <p className="font-bold">
               ${job.minSalary} - ${job.maxSalary}{" "}
               <span className="font-normal text-[1.4rem] text-customGray ">

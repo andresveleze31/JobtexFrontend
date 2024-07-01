@@ -1,3 +1,4 @@
+import { MapPin, Search } from "lucide-react";
 import React from "react";
 
 function FormularioJobs() {
@@ -7,11 +8,7 @@ function FormularioJobs() {
         <div>
           <label className="block font-bold mb-[1rem] ">Job Title</label>
           <div className="bg-white rounded-xl border p-[1rem] flex gap-[2rem]">
-            <img
-              className="w-[3rem] h-[3rem] "
-              src="../../public/icons/icon_lupa_black.png"
-              alt="Icon Lupa"
-            />
+            <Search />
             <input
               className="w-full focus:outline-none"
               type="text"
@@ -22,11 +19,7 @@ function FormularioJobs() {
         <div className="mt-[2rem] ">
           <label className="block font-bold mb-[1rem] ">List Location</label>
           <div className="bg-white rounded-xl border p-[1rem] flex gap-[2rem]">
-            <img
-              className="w-[3rem] h-[3rem] "
-              src="../../public/icons/icon_ubicacion_black.png"
-              alt="Icon Lupa"
-            />
+            <MapPin />
             <select className="w-full  focus:outline-none" id="location">
               <option disabled selected value="">
                 All Location

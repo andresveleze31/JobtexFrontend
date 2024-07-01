@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import useAuthEmployer from "../hooks/useAuthEmployer";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { DollarSign, Heart, MapPin } from "lucide-react";
 
 function Candidate({ candidate }) {
 
@@ -66,7 +67,6 @@ function Candidate({ candidate }) {
 
   }
 
-  console.log(candidate)
   return (
     <div className="border rounded-xl p-[2rem] ">
       <div className="grid grid-cols-3">
@@ -85,12 +85,11 @@ function Candidate({ candidate }) {
           />
         </div>
         <div className="flex justify-center">
-          <button onClick={handleFavorite} className="border h-[4rem] w-[4.2rem] rounded-full p-[1rem] ">
-            <img
-              className="filter opacity-25 grayscale w-[2rem] h-[2rem] "
-              src="../public/icons/icon_corazon.png"
-              alt="Icon Corazon"
-            />
+          <button
+            onClick={handleFavorite}
+            className="border h-[4rem] w-[4.2rem] rounded-full p-[1rem] flex items-center justify-center"
+          >
+            <Heart className="text-customGray" />
           </button>
         </div>
       </div>
@@ -102,21 +101,14 @@ function Candidate({ candidate }) {
         <h3 className="font-bold mb-3 text-center">{candidate.fullname}</h3>
         <div className="flex gap-[1rem] ">
           <div className="flex gap-[.5rem] items-center ">
-            <img
-              className="w-[2.3rem] h-[2.4rem] "
-              src="../public/icons/icon_ubicacion_gray.png"
-              alt="Icon Location"
-            />
+            <MapPin className="text-customGray w-[2rem] h-[2rem]  " />
             <p className="text-[1.4rem] text-customGray">{candidate.address}</p>
           </div>
           <div className="flex gap-[.5rem] items-center ">
-            <img
-              className="w-[2.5rem] h-[2.5rem] filter grayscale opacity-80 h-[2.2rem] "
-              src="../public/icons/icon_money.png"
-              alt="Icon Location"
-            />
+            <DollarSign className="text-customGray w-[1.8rem] h-[1.8rem]  " />
             <p className="text-[1.4rem] text-customGray">
-              ${candidate.salary} / {candidate.salary && candidate.salaryType.salaryType}
+              ${candidate.salary} /{" "}
+              {candidate.salary && candidate.salaryType.salaryType}
             </p>
           </div>
         </div>

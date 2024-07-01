@@ -1,79 +1,56 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast';
+import { FileText, Forward, Heart, Lock, LogOut, MessageCircle, Send, User2 } from 'lucide-react';
 
 function SidebarCandidate() {
   return (
-    <aside className="flex h-[calc(100vh-90px)] items-start flex-col gap-[1rem] px-[1.5rem] py-[3rem]   ">
+    <aside className="flex h-[calc(100vh-90px)] items-start flex-col gap-[2rem] px-[1.5rem] py-[3rem]   ">
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"profile"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_profile.png"
-          alt="Icon Profile"
-        />
+        <User2 />
         Profile
       </Link>
 
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"resume"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_resume.png"
-          alt="Icon jobs"
-        />
+        <FileText />
         My Resume
       </Link>
 
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"my-applied"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_forms.png"
-          alt="Icon Forms"
-        />
+        <Forward />
         My Applied
       </Link>
 
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"favorites"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_favorites.png"
-          alt="Icon Forms"
-        />
+        <Heart />
         Favorites
       </Link>
 
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"messages"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_message.png"
-          alt="Icon Forms"
-        />
+        <MessageCircle />
         Messages
       </Link>
 
       <Link
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"change-password"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_password.png"
-          alt="Icon Forms"
-        />
+        <Lock />
         Change Password
       </Link>
 
@@ -82,14 +59,10 @@ function SidebarCandidate() {
           localStorage.removeItem("tokenCandidate");
           toast.success("You Logout");
         }}
-        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.4rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
+        className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
         to={"/"}
       >
-        <img
-          className="w-[2rem] h-[2rem] "
-          src="../../public/admin/icon_logout.png"
-          alt="Icon Forms"
-        />
+        <LogOut />
         Logout
       </Link>
     </aside>

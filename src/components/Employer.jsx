@@ -1,11 +1,11 @@
+import { MapPin } from 'lucide-react';
 import React from 'react'
 import { Link } from "react-router-dom";
 
 function Employer({employer}) {
-  console.log(employer)
   return (
     <div className="p-[2rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300 flex justify-center">
-      <div className='flex-col items-center'>
+      <div className="flex-col items-center">
         <div className="flex gap-[2rem] items-center ">
           <img
             className="w-[6rem] h-[6rem] "
@@ -26,11 +26,7 @@ function Employer({employer}) {
             </Link>
             <div className="flex gap-[1rem] ">
               <div className="flex gap-[.5rem] items-center ">
-                <img
-                  className="w-[2.3rem] h-[2.4rem] "
-                  src="../public/icons/icon_ubicacion_gray.png"
-                  alt="Icon Location"
-                />
+                <MapPin className="text-customGray w-[2rem] h-[2rem] " />
                 <p className="text-[1.4rem] text-customGray">
                   {employer.address}
                 </p>
