@@ -51,12 +51,18 @@ function CandidateProfile() {
       },
     };
 
-    const { data } = await axios.get(
-      `${import.meta.env.VITE_BACKEND_URL}/api/candidates/get-profile/${
-        authCandidate._id
-      }`,
-      config
-    );
+    const { data } = await axios
+      .get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/candidates/get-profile/${
+          authCandidate._id
+        }`,
+        config
+      )
+      .catch((error) => {
+        // Manejo de errores
+        console.error("Error fetching data: ", error);
+        window.location.reload();
+      });
 
     //Set Normal Data
     setFullname(data.fullname);
@@ -83,15 +89,17 @@ function CandidateProfile() {
     //Set the array,
     ///get-candidate-networks/:id
     const candidateNet = await axios.get(
-      `${
-        import.meta.env.VITE_BACKEND_URL
-      }/api/network//get-candidate-networks/${authCandidate._id}`
+      `${import.meta.env.VITE_BACKEND_URL}/api/network/get-candidate-networks/${
+        authCandidate._id
+      }`
     );
-    setNetworksNumber(candidateNet.data.length);
-    setNetworksArray(candidateNet.data);
 
-    console.log(data.lat);
-    if(data.lat !== undefined){
+    if (candidateNet.data.length > 0) {
+      setNetworksNumber(candidateNet.data.length);
+      setNetworksArray(candidateNet.data);
+    }
+
+    if (data.lat !== undefined) {
       setCargando(false);
     }
 
@@ -101,6 +109,7 @@ function CandidateProfile() {
   useEffect(() => {
     getProfile();
   }, []);
+
 
   function handleSelectSocial(index, e) {
     setNetworksArray((prevState) => {
@@ -129,8 +138,6 @@ function CandidateProfile() {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(authCandidate);
-
-    
 
     if (
       [

@@ -44,11 +44,11 @@ function Home() {
             </p>
           </div>
 
-          <form className="bg-white w-4/6 mt-[4rem] sm:pt-[4rem] rounded-xl p-[2rem] flex md:flex-col gap-[5rem] md:w-full md:justify-center ">
+          <form className="bg-white w-4/6 mt-[4rem] sm:pt-[4rem] rounded-xl p-[2rem] grid grid-cols-3   md:flex md:flex-col gap-[5rem] md:w-full md:justify-center ">
             <div className="flex md:w-full gap-[1rem] md:gap-[2rem] items-center ">
               <Search />
               <input
-                className="w-[26rem] md:w-full focus:outline-none"
+                className="w-full md:w-full focus:outline-none"
                 type="text"
                 placeholder="Job Title, key words or company"
               />
@@ -76,12 +76,12 @@ function Home() {
               value={"Find Jobs"}
             />
           </form>
-          <div className="mt-[2rem] flex gap-[2rem] text-white text-[1.4rem] font-semibold ">
-            <Link to={"#"}>Designer</Link>
-            <Link to={"#"}>Developer</Link>
-            <Link to={"#"}>Tester</Link>
-            <Link to={"#"}>Writing</Link>
-            <Link to={"#"}>Project Manager</Link>
+          <div className="mt-[2rem] md:hidden flex gap-[2rem] text-white text-[1.4rem] font-semibold ">
+            <Link to={"/jobs"}>Designer</Link>
+            <Link to={"/jobs"}>Developer</Link>
+            <Link to={"/jobs"}>Tester</Link>
+            <Link to={"/jobs"}>Writing</Link>
+            <Link to={"/jobs"}>Project Manager</Link>
           </div>
         </div>
       </header>

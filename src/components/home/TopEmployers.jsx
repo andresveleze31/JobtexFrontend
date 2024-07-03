@@ -22,7 +22,7 @@ function TopEmployers() {
             Showing companies based on reviews and recent job openings
           </p>
         </div>
-        <Link className="font-semibold  flex gap-[2rem] items-center " to={"#"}>
+        <Link className="font-semibold  flex gap-[2rem] items-center " to={"/employers"}>
           All Employers{" "}
           <StepForward />
         </Link>

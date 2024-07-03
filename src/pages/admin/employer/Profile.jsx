@@ -46,12 +46,18 @@ function Profile() {
       },
     };
 
-    const { data } = await axios.get(
-      `${import.meta.env.VITE_BACKEND_URL}/api/employers/get-profile/${
-        authEmployer._id
-      }`,
-      config
-    );
+    const { data } = await axios
+      .get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/employers/get-profile/${
+          authEmployer._id
+        }`,
+        config
+      )
+      .catch((error) => {
+        // Manejo de errores
+        console.error("Error fetching data: ", error);
+        window.location.reload();
+      });
 
     //Set Normal Data
     setFullname(data.fullname);
@@ -202,8 +208,7 @@ function Profile() {
 
       if (networksNumber >= 1) {
         networksArray.forEach(async (net, index) => {
-
-          if(index > networksNumber - 1){
+          if (index > networksNumber - 1) {
             return toast.success("Profile Successfully Updated");
           }
 

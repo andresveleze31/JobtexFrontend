@@ -1,17 +1,18 @@
-import { MapPin } from 'lucide-react';
-import React from 'react'
+import { MapPin } from "lucide-react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-function Employer({employer}) {
+function Employer({ employer }) {
   return (
     <div className="px-[2rem] py-[4rem] border border-slate-200 border-opacity-50 hover:border-primary transition-all duration-300 flex justify-center">
       <div className="flex-col items-center">
         <div className="flex gap-[2rem] items-center ">
           <img
             className="w-[6rem] h-[6rem] "
-            src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+            src={
+              
               employer.photo
-            }`}
+            }
             alt="Logo Employers"
           />
           <div className="flex flex-col gap-[.5rem] ">
@@ -45,4 +46,4 @@ function Employer({employer}) {
   );
 }
 
-export default Employer
+export default Employer;

@@ -78,9 +78,7 @@ async function handleFavorite(e) {
           <div className="flex gap-[2rem] items-center">
             <img
               className="w-[6rem] h-[6rem] "
-              src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
-                job.employer_id.photo
-              }`}
+              src={job.employer_id.photo}
               alt="Logo Employers"
             />
             <div className="flex flex-col gap-[.5rem] ">
@@ -121,7 +119,7 @@ async function handleFavorite(e) {
         </div>
         <div className="flex justify-between mt-[1rem] items-center">
           <div className="flex items-center gap-[1rem]  ">
-            <CircleDollarSign  />
+            <CircleDollarSign />
             <p className="font-bold">
               ${job.minSalary} - ${job.maxSalary}{" "}
               <span className="font-normal text-[1.4rem] text-customGray ">

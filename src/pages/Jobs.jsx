@@ -7,7 +7,15 @@ import Loader from "../components/Loader";
 
 function Jobs() {
 
-  const {jobs} = useJobtex();
+  const {
+    jobs,
+    categories,
+    jobTypes,
+    industries,
+    locations,
+    levels,
+    qualifications,
+  } = useJobtex();
 
   return (
     <main>
@@ -15,7 +23,7 @@ function Jobs() {
 
 
       <div className="contenedor my-[5rem] grid grid-cols-[1fr,2fr] gap-[3rem] md:grid-cols-1 ">
-        <FormularioJobs />
+        <FormularioJobs jobs={jobs}  />
         {jobs.length == 0 && <Loader />}
         <div className="grid h-fit grid-cols-2 gap-[2rem] md:grid-cols-1  ">
           {jobs.map((job) => {

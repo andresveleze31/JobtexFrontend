@@ -20,15 +20,18 @@ function FeaturedJobs() {
       </div>
 
       <div className="mt-[5rem] grid grid-cols-2 gap-[4rem] sm:grid-cols-1">
-        {jobs.map(job => {
-          return <Job job={job} />
+        {jobs.map((job) => {
+          return <Job job={job} />;
         })}
-
       </div>
 
       <div className="flex justify-center mt-[5rem] ">
-      <Link className="text-white font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 ">See More Jobs {">"} </Link>
-
+        <Link
+          to={"/jobs"}
+          className="text-white font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 "
+        >
+          See More Jobs {">"}{" "}
+        </Link>
       </div>
     </main>
   );

@@ -129,7 +129,7 @@ function JobDetails() {
                 src={
                   cargando
                     ? "No Image"
-                    : `${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                    : `${
                         job.employer_id.photo
                       }`
                 }
@@ -160,8 +160,8 @@ function JobDetails() {
               </div>
             </div>
 
-            <div className="md:grid md:grid-cols-2 md:items-center mt-[2rem] ">
-              <div className="flex gap-[2rem] h-fit   ">
+            <div className="md:grid md:grid-cols-2 sm:grid-cols-1 md:items-center mt-[2rem] ">
+              <div className="flex gap-[2rem] h-fit sm:justify-center   ">
                 <button className="border rounded-full py-[1rem] px-[1.2rem] ">
                   <Heart className="text-customGray" />
                 </button>
@@ -172,7 +172,7 @@ function JobDetails() {
                   Apply Now
                 </button>
               </div>
-              <div>
+              <div className="flex flex-col sm:items-center">
                 <p className="mt-[1rem] flex justify-end md:justify-start gap-[.5rem] text-[1.4rem] font-bold">
                   <span className="text-red-600 font-normal">
                     Deadline Date:{" "}

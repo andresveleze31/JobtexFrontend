@@ -41,10 +41,10 @@ const MobileSidebarEmployer = () => {
           onClick={toggleDrawer(true)}
         >
           <Menu />
-          <p>Employer Menu</p>
+          <p className="font-sans">Employer Menu</p>
         </Button>
         <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div className="flex flex-col gap-[2rem] mt-[4rem] ">
+          <div className="flex flex-col gap-[2rem] mt-[4rem] font-sans">
             <Link
               className="flex w-full py-[1rem] px-[2rem]  hover:bg-gray-100 text-[1.6rem] transition-all duration-300 font-semibold items-center gap-[1rem] rounded-xl "
               to={"profile"}

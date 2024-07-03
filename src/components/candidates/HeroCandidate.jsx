@@ -10,7 +10,7 @@ function HeroCandidate({candidate}) {
         <div className="flex md:flex-col items-center gap-[2rem]">
           <img
             className="rounded-lg w-[12rem] h-[12rem] "
-            src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+            src={`${
               candidate.photo
             }`}
             alt="Candidate Photo"

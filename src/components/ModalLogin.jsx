@@ -53,7 +53,7 @@ function ModalLogin() {
 
         setTimeout(() => {
           navigate("/admin/candidate/profile");
-        }, 3000);
+        }, 5000);
         toast.success("You will be redirected");
       } catch (error) {
         console.log(error);
@@ -74,7 +74,7 @@ function ModalLogin() {
         localStorage.setItem("tokenEmployer", data.token);
         setTimeout(() => {
           navigate("/admin/employer/profile");
-        }, 3000);
+        }, 5000);
         toast.success("You will be redirected");
       } catch (error) {
         console.log(error);

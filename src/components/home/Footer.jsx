@@ -14,7 +14,7 @@ function Footer() {
           />
 
           <div className="flex gap-[2rem] items-center">
-            <p className="text-[1.4rem] font-bold">Follow us:</p>
+            <p className="text-[1.4rem] sm:hidden font-bold">Follow us:</p>
             <div className="p-[1rem] group cursor-pointer hover:bg-primary transition-all duration-300 rounded-full bg-white ">
               <Facebook />
             </div>
@@ -32,7 +32,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <nav className="grid mt-[3rem] grid-cols-[2fr,1fr,1fr,1fr,1fr] gap-[2rem] sm:grid-cols-2   md:justify-items-center md:items-center ">
+        <nav className="grid mt-[3rem] grid-cols-[2fr,1fr,1fr,1fr,1fr] gap-[2rem] sm:grid-cols-1  md:justify-items-start sm:justify-items-center md:items-center ">
           <div className="md:flex md:flex-col md:items-center">
             <div className="flex  gap-[2rem] items-center">
               <Phone className="text-primary w-[4rem] h-[4rem] " />
@@ -52,7 +52,8 @@ function Footer() {
               118 E 128th St, East Chicago, IN 46312, US
             </p>
           </div>
-          <div>
+
+          <div className="sm:hidden">
             <p className="font-bold">Quick Links</p>
             <div className="flex mt-[2rem] flex-col gap-[1rem] ">
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
@@ -69,7 +70,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="sm:hidden">
             <p className="font-bold">For Candidates</p>
             <div className="flex mt-[2rem] flex-col gap-[1rem] ">
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
@@ -86,7 +87,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="sm:hidden">
             <p className="font-bold">For Employers</p>
             <div className="flex mt-[2rem] flex-col gap-[1rem] ">
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
@@ -103,7 +104,7 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <div>
+          <div className="sm:hidden">
             <p className="font-bold">Download App</p>
             <div className="flex mt-[2rem] flex-col gap-[1rem] ">
               <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
@@ -118,6 +119,76 @@ function Footer() {
                   alt="Icon AppStore"
                 />
               </Link>
+            </div>
+          </div>
+          <div className="sm:grid sm:grid-cols-2 gap-[2rem] hidden sm:block">
+            <div>
+              <p className="font-bold">Quick Links</p>
+              <div className="flex mt-[2rem] flex-col gap-[1rem] ">
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Job Listing
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Candidates
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Employers
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Login
+                </Link>
+              </div>
+            </div>
+            <div>
+              <p className="font-bold">For Candidates</p>
+              <div className="flex mt-[2rem] flex-col gap-[1rem] ">
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Job Listing
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Candidates
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Employers
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Login
+                </Link>
+              </div>
+            </div>
+            <div>
+              <p className="font-bold">For Employers</p>
+              <div className="flex mt-[2rem] flex-col gap-[1rem] ">
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Job Listing
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Candidates
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Employers
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  Login
+                </Link>
+              </div>
+            </div>
+            <div>
+              <p className="font-bold">Download App</p>
+              <div className="flex mt-[2rem] flex-col gap-[1rem] ">
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  <img
+                    src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/google-play.png"
+                    alt="Icon PlayStore"
+                  />
+                </Link>
+                <Link className="text-[1.4rem] text-customGray hover:text-primary transition-all duration-300">
+                  <img
+                    src="https://demoapus1.com/jobtex-new/wp-content/uploads/2023/05/app-store.png"
+                    alt="Icon AppStore"
+                  />
+                </Link>
+              </div>
             </div>
           </div>
         </nav>

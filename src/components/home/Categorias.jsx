@@ -23,7 +23,10 @@ function Categorias() {
             Recruitment Made Easy in 100 seconds
           </p>
         </div>
-        <Link className="font-semibold  flex gap-[2rem] items-center " to={"#"}>
+        <Link
+          className="font-semibold  flex gap-[2rem] items-center "
+          to={"/jobs"}
+        >
           All Categories <StepForward />
         </Link>
       </div>

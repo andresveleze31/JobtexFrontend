@@ -24,12 +24,18 @@ function CandidateJobs() {
       };
 
       try {
-        const { data } = await axios.get(
-          `${
-            import.meta.env.VITE_BACKEND_URL
-          }/api/applications/get-application/${authCandidate._id}`,
-          config
-        );
+        const { data } = await axios
+          .get(
+            `${
+              import.meta.env.VITE_BACKEND_URL
+            }/api/applications/get-application/${authCandidate._id}`,
+            config
+          )
+          .catch((error) => {
+            // Manejo de errores
+            console.error("Error fetching data: ", error);
+            window.location.reload();
+          });
         console.log(data);
         setJobs(data);
         

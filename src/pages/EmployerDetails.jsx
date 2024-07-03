@@ -58,7 +58,7 @@ function EmployerDetails() {
             <div className="flex gap-[2rem] items-center">
               <img
                 className="w-[10rem] h-[10rem] "
-                src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                src={`${
                   employer.photo
                 }`}
                 alt="Employer Image"

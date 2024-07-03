@@ -78,7 +78,7 @@ function Candidate({ candidate }) {
         <div className="flex justify-center">
           <img
             className="rounded-full w-[8rem] h-[8rem] "
-            src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+            src={`${
               candidate.photo
             }`}
             alt="Candidate Photo"
