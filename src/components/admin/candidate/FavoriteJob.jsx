@@ -57,7 +57,7 @@ function FavoriteJob({job, jobs, setJobs}) {
       <div className="flex gap-[2rem] items-center">
         <img
           className="w-[6rem] h-[6rem] "
-          src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+          src={`${
             job.job_id.employer_id.photo
           }`}
           alt="Img Job"

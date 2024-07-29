@@ -17,8 +17,7 @@ import NavBarAll from "../components/NavBarAll";
 import Loader from "../components/Loader";
 
 function Home() {
-
-  const {login, categories, jobs, register} = useJobtex();
+  const { login, categories, jobs, register } = useJobtex();
   console.log(jobs);
 
   return (
@@ -70,11 +69,9 @@ function Home() {
                 <option value="United States">United States</option>
               </select>
             </div>
-            <input
-              className="text-white w-full font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 "
-              type="submit"
-              value={"Find Jobs"}
-            />
+            <Link to={"/jobs"} className="text-white w-full text-center font-semibold bg-primary py-[1rem] px-[3rem] rounded-lg cursor-pointer hover:bg-white hover:text-primary border border-primary transition-all duration-300 ">
+              Find Jobs
+            </Link>
           </form>
           <div className="mt-[2rem] md:hidden flex gap-[2rem] text-white text-[1.4rem] font-semibold ">
             <Link to={"/jobs"}>Designer</Link>

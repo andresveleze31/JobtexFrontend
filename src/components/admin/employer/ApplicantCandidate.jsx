@@ -103,7 +103,7 @@ function ApplicantCandidate({ candidate, modalMessage, setModalMessage }) {
       <div className="flex gap-[2rem] items-center">
         <img
           className="w-[6rem] h-[6rem] rounded-full "
-          src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+          src={`${
             candidate.candidate_id.photo
           }`}
           alt="Img Job"

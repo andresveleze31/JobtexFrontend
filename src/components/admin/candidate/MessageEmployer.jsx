@@ -23,7 +23,7 @@ function MessageEmployer({ message, setModalMessage, modalMessage }) {
       <div className="flex gap-[2rem] items-center">
         <img
           className="w-[6rem] h-[6rem] "
-          src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${
+          src={`${
             message.employer_id.photo
           }`}
           alt="Img Job"

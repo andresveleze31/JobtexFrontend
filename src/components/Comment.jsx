@@ -27,10 +27,10 @@ function Comment({comment}) {
             className="w-[6rem] h-[6rem] "
             src={
               type
-                ? `${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                ? `${
                     comment.employer_id.photo
                   }`
-                : `${import.meta.env.VITE_BACKEND_URL}/uploads/${
+                : `${
                     comment.candidate_id.photo
                   }`
             }
